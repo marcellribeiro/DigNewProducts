@@ -69,11 +69,6 @@ class ViewController: UIViewController {
     }
 
     func didSelectItem(name: String, description: String) {
-//        let vc = ViewController()
-//        self.selectedTitle = name
-//        self.selectedDescription = description
-
-
         let storyBoard: UIStoryboard = UIStoryboard(name: "Description", bundle: nil)
         let newViewController = storyBoard.instantiateViewController(withIdentifier: "descriptionViewController") as! DescriptionViewController
 
@@ -81,22 +76,6 @@ class ViewController: UIViewController {
         newViewController.selectedDescription = description
         self.present(newViewController, animated: true, completion: nil)
 
-
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "Description", bundle: nil)
-//        let newViewController = storyBoard.instantiateViewController(withIdentifier: "descriptionViewController") as! DescriptionViewController
-//        self.present(newViewController, animated: true, completion: nil)
-
-
-//        let alert = UIAlertController(
-//            title: name,
-//            message: description,
-//            preferredStyle: .alert
-//        )
-//        alert.addAction(UIAlertAction(
-//            title: "OK",
-//            style: .default, handler: nil
-//        ))
-//        self.present(alert, animated: true)
     }
 
     @IBAction func didTapDigioCashButton(_ sender: Any) {

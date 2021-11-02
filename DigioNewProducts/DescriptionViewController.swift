@@ -16,20 +16,10 @@ class DescriptionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.titleLabel?.text = selectedTitle
-        self.descriptionLabel?.text = selectedDescription
 
         self.view.accessibilityIdentifier = "descriptionViewController"
         self.titleLabel.accessibilityIdentifier = "titleLabel"
         self.descriptionLabel.accessibilityIdentifier = "descriptionLabel"
-
-        updateView()
-    }
-
-    func updateView() {
-        print("updateView")
-        print("title \(self.selectedTitle)")
-        print("description \(self.selectedDescription)")
 
         self.titleLabel.text = self.selectedTitle
         self.descriptionLabel.text = self.selectedDescription
